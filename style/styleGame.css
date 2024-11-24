@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-container {
+    display: flex;
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Панель ведущего */
+#host-panel {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#host-panel .host-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Секция тем и вопросов */
+#topic-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Центрирование тем */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.topic {
+    margin: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 180px;
+}
+
+.topic-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.question-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.question-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Панель игроков */
+#player-panel {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.player input {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.player input:disabled {
+    background-color: #333;
+}
+
+.player-score {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+/* Модальное окно для вопросов */
+#questionModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    width: 600px; /* Увеличение ширины модального окна */
+    height: 200px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+/* Модальное окно победителя */
+#winnerModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    z-index: 15;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#editButton{
+    border: #222 1px solid;
+    border-radius: 5px;
+}
+#goToHomePageButton{
+    border: #222 1px solid;
+    border-radius: 5px;
+}
+#answerButton{
+    border: #222 1px solid;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+#thinkingTimer, #displayTimer{
+    text-align: left;
+}
+#answerResult > button{
+    border: #222 1px solid;
+    border-radius: 5px;
+    justify-items: auto;
+}

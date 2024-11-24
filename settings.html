@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки игры</title>
+    <link rel="stylesheet" href="style/styleSettings.css">
+</head>
+<body>
+    <!-- Header с кнопкой для возврата на главную страницу -->
+    <header>
+        <a href="homePage.html" class="back-button">
+            &#8592; <span>В главное меню</span>
+        </a>
+    </header>
+
+    <!-- Контейнер с настройками игры -->
+    <div class="container">
+        <h1>Настройки игры</h1>
+        <form id="settingsForm">
+            <!-- Настройка: Показывать ли ответ -->
+            <div class="setting">
+                <label for="showAnswer">Показывать ли ответ:
+                    <input type="checkbox" id="showAnswer">
+                </label>
+            </div>
+            <!-- Настройка: Время на размышление -->
+            <div class="setting">
+                <label for="thinkingTime">Время на размышление (в секундах):
+                    <input type="number" id="thinkingTime" min="5" max="60" value="10">
+                </label>
+            </div>
+            <!-- Настройка: Время показа вопроса -->
+            <div class="setting">
+                <label for="questionDisplayTime">Время показа вопроса (в секундах):
+                    <input type="number" id="questionDisplayTime" min="5" max="120" value="30">
+                </label>
+            </div>
+            <!-- Настройка: Количество игроков -->
+            <div class="setting">
+                <label for="playerCount">Количество игроков (от 1 до 5):
+                    <input type="number" id="playerCount" min="1" max="5" value="1">
+                </label>
+            </div>
+            <!-- Кнопка для сохранения настроек -->
+            <button type="button" class="save-button" onclick="saveSettings()">Сохранить настройки</button>
+        </form>
+    </div>
+    <script src="scripts/scriptSettings.js"></script>
+</body>
+</html>

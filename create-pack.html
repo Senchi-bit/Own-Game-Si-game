@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание Пака</title>
+    <link rel="stylesheet" href="style/styleCreatePack.css">
+</head>
+<body>
+    <!-- Кнопка возврата на главную страницу -->
+    <header>
+        <a href="homePage.html" class="back-button">
+            &#8592; <span>В главное меню</span>
+        </a>
+    </header>
+
+    <h1>Создание Пака</h1>
+    <div>
+        <!-- Кнопка для добавления темы -->
+        <label for="questionCount">Количество вопросов в теме:</label>
+        <select id="questionCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button class="add-topic-button" onclick="addTopic()">Добавить тему</button>
+    </div>
+
+    <div id="topicsContainer" class="container"></div>
+
+    <!-- Кнопка для сохранения пака -->
+    <button class="save-pack-button" onclick="savePack()">Сохранить Пак</button>
+    <script src="scripts/scriptCreatePack.js"></script>
+</body>
+</html>

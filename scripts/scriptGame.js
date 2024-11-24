@@ -16,10 +16,10 @@ let thinkingTimerInterval = null;
 // Загрузка JSON файлов
 async function loadFiles() {
     try {
-        const settingsResponse = await fetch('settings.json');
+        const settingsResponse = await fetch('/settings.json');
         settings = await settingsResponse.json();
 
-        const packResponse = await fetch('pack.json');
+        const packResponse = await fetch('/pack.json');
         pack = await packResponse.json();
 
         initializeGame();
